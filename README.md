@@ -19,7 +19,7 @@ Algorithm:
 
 1.3) For groups selected in (1.2) extract all lower levels with level="fonds" and format them as independent EAD files
 
-1.4) Select c03 grup " Militär"
+1.4) Select c03 gr0up " Militär"
 
 1.5) Select subgroups c04
 • Reichswehr und Wehrmacht 1919 bis 1945
