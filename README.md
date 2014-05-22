@@ -33,6 +33,6 @@ Algorithm:
 
 2.1) Select c03 grup "Einrichtungen der NSDAP"
 
-2.2) For groups selected in (2.1) extract all lower levels with level="fonds" and format them as independent EAD files
+2.2) For groups selected in (2.1) extract all lower levels with ```level="fonds"``` and format them as independent EAD files
 
 3) Merge extracted batches
