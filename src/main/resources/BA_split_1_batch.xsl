@@ -11,7 +11,7 @@
                     <xsl:variable name="c03group" select="did/unittitle"/>
                     <xsl:if
                         test="$c03group = ('Andere politische Parteien und Gruppierungen' , 'Arbeit, Soziales' , 'Auswärtiges, Kolonial- und Besatzungsverwaltung' ,
-                        ' Bilder, Plakate, Karten, Pläne, Töne' ,  'Finanzen, Bau' , ' Inneres, Polizei und SS, Volkstum' , ' Justiz' , 'Kultus, Wissenschaft, Propaganda' ,
+                        ' Bilder, Plakate, Karten, Pläne, Töne' ,  'Finanzen, Bau' , 'Inneres, Polizei und SS, Volkstum' , ' Justiz' , 'Kultus, Wissenschaft, Propaganda' ,
                         'Oberste Organe' , 'Wirtschaft, Rüstung, Landwirtschaft, Post, Verkehr', 'Organisationen und Verbände')">
                         <xsl:for-each select="c04[@level='fonds']/.">
                             <xsl:variable name="filename_id"
