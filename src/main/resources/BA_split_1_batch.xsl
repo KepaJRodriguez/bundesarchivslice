@@ -15,7 +15,7 @@
                         'Oberste Organe' , 'Wirtschaft, Rüstung, Landwirtschaft, Post, Verkehr', 'Organisationen und Verbände')">
                         <xsl:for-each select="c04[@level='fonds']/.">
                             <xsl:variable name="filename_id"
-                                select="did/unitid[@encodinganalog='Bestandssignatur']"/>
+                                select="replace(did/unitid[@encodinganalog='Bestandssignatur'], ' ', '_')"/>
                             <xsl:result-document href="BA_split_{$filename_id}.xml">
                                 <ead>
                                     <xsl:call-template name="header"/>
@@ -30,13 +30,17 @@
                                                 </subject>
                                             </xsl:for-each>
                                         </controlaccess>
+                                        <processinfo>
+                                            <p>this fonds was selected by EHRI from their holding
+                                                guide, based on date range and subject</p>
+                                        </processinfo>
                                     </archdesc>
                                 </ead>
                             </xsl:result-document>
                         </xsl:for-each>
                         <xsl:for-each select="c04/c05[@level='fonds']/.">
                             <xsl:variable name="filename_id"
-                                select="did/unitid[@encodinganalog='Bestandssignatur']"/>
+                                select="replace(did/unitid[@encodinganalog='Bestandssignatur'], ' ', '_')"/>
                             <xsl:result-document href="BA_split_{$filename_id}.xml">
                                 <ead>
                                     <xsl:call-template name="header"/>
@@ -51,13 +55,17 @@
                                                 </subject>
                                             </xsl:for-each>
                                         </controlaccess>
+                                        <processinfo>
+                                            <p>this fonds was selected by EHRI from their holding
+                                                guide, based on date range and subject</p>
+                                        </processinfo>
                                     </archdesc>
                                 </ead>
                             </xsl:result-document>
                         </xsl:for-each>
                         <xsl:for-each select="c04/c05/c06[@level='fonds']/.">
                             <xsl:variable name="filename_id"
-                                select="did/unitid[@encodinganalog='Bestandssignatur']"/>
+                                select="replace(did/unitid[@encodinganalog='Bestandssignatur'], ' ', '_')"/>
                             <xsl:result-document href="BA_split_{$filename_id}.xml">
                                 <ead>
                                     <xsl:call-template name="header"/>
@@ -72,13 +80,17 @@
                                                 </subject>
                                             </xsl:for-each>
                                         </controlaccess>
+                                        <processinfo>
+                                            <p>this fonds was selected by EHRI from their holding
+                                                guide, based on date range and subject</p>
+                                        </processinfo>
                                     </archdesc>
                                 </ead>
                             </xsl:result-document>
                         </xsl:for-each>
                         <xsl:for-each select="c04/c05/c06/c07[@level='fonds']/.">
                             <xsl:variable name="filename_id"
-                                select="did/unitid[@encodinganalog='Bestandssignatur']"/>
+                                select="replace(did/unitid[@encodinganalog='Bestandssignatur'], ' ', '_')"/>
                             <xsl:result-document href="BA_split_{$filename_id}.xml">
                                 <ead>
                                     <xsl:call-template name="header"/>
@@ -93,6 +105,10 @@
                                                 </subject>
                                             </xsl:for-each>
                                         </controlaccess>
+                                        <processinfo>
+                                            <p>this fonds was selected by EHRI from their holding
+                                                guide, based on date range and subject</p>
+                                        </processinfo>
                                     </archdesc>
                                 </ead>
                             </xsl:result-document>
@@ -105,7 +121,7 @@
                                 test="$c04group = ('Reichswehr und Wehrmacht 1919 bis 1945', 'Waffen-SS 1939 bis 1945')">
                                 <xsl:for-each select="c05[@level='fonds']/.">
                                     <xsl:variable name="filename_id"
-                                        select="did/unitid[@encodinganalog='Bestandssignatur']"/>
+                                        select="replace(did/unitid[@encodinganalog='Bestandssignatur'], ' ', '_')"/>
                                     <xsl:result-document href="BA_split_{$filename_id}.xml">
                                         <ead>
                                             <xsl:call-template name="header"/>
@@ -120,13 +136,17 @@
                                                         </subject>
                                                     </xsl:for-each>
                                                 </controlaccess>
+                                                <processinfo>
+                                                    <p>this fonds was selected by EHRI from their holding
+                                                        guide, based on date range and subject</p>
+                                                </processinfo>
                                             </archdesc>
                                         </ead>
                                     </xsl:result-document>
                                 </xsl:for-each>
                                 <xsl:for-each select="c05/c06[@level='fonds']/.">
                                     <xsl:variable name="filename_id"
-                                        select="did/unitid[@encodinganalog='Bestandssignatur']"/>
+                                        select="replace(did/unitid[@encodinganalog='Bestandssignatur'], ' ', '_')"/>
                                     <xsl:result-document href="BA_split_{$filename_id}.xml">
                                         <ead>
                                             <xsl:call-template name="header"/>
@@ -141,13 +161,17 @@
                                                         </subject>
                                                     </xsl:for-each>
                                                 </controlaccess>
+                                                <processinfo>
+                                                    <p>this fonds was selected by EHRI from their holding
+                                                        guide, based on date range and subject</p>
+                                                </processinfo>
                                             </archdesc>
                                         </ead>
                                     </xsl:result-document>
                                 </xsl:for-each>
                                 <xsl:for-each select="c05/c06/c07[@level='fonds']/.">
                                     <xsl:variable name="filename_id"
-                                        select="did/unitid[@encodinganalog='Bestandssignatur']"/>
+                                        select="replace(did/unitid[@encodinganalog='Bestandssignatur'], ' ', '_')"/>
                                     <xsl:result-document href="BA_split_{$filename_id}.xml">
                                         <ead>
                                             <xsl:call-template name="header"/>
@@ -162,6 +186,10 @@
                                                         </subject>
                                                     </xsl:for-each>
                                                 </controlaccess>
+                                                <processinfo>
+                                                    <p>this fonds was selected by EHRI from their holding
+                                                        guide, based on date range and subject</p>
+                                                </processinfo>
                                             </archdesc>
                                         </ead>
                                     </xsl:result-document>
@@ -175,6 +203,7 @@
     </xsl:template>
 
     <xsl:template name="header">
+        <xsl:variable name="actualdate" select="current-dateTime()"/>
         <eadheader>
             <eadid countrycode="DE">
                 <xsl:for-each select="unitid[@encodinganalog='Bestandssignatur']">
@@ -188,17 +217,26 @@
                             <xsl:value-of select="."/>
                         </xsl:for-each>
                     </titleproper>
-                    <author>Bundesarchiv / Basys2</author>
+                    <author>Bundesarchiv</author>
                 </titlestmt>
             </filedesc>
-            <profiledesc>
+            <profiledesc>                
                 <creation>
+                    Bundesarchiv from Basys2
                     <date>17.06.2013 13:06</date>
                 </creation>
                 <langusage>
                     <language langcode="ger" scriptcode="Latn">German</language>
                 </langusage>
             </profiledesc>
+            <revisiondesc>
+                <change>
+                    <date calendar="gregorian" era="ce">
+                        <xsl:value-of select="$actualdate"/>
+                    </date>
+                    <item>preprocessing transformation</item>
+                </change>
+            </revisiondesc>
         </eadheader>
     </xsl:template>
 
