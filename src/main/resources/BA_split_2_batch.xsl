@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:isbn:1-931666-22-9"
-    exclude-result-prefixes="xs" version="2.0">
+    version="2.0">
 
 
+    <xsl:variable name="datachangeprovenance_date" select="ead/eadheader/filedesc/revisiondesc/change/date"/>
+    <xsl:variable name="datachangeprovenance_item" select="ead/eadheader/filedesc/revisiondesc/change/item"/>
+    
+    
     <xsl:template match="/">
         <xsl:variable name="actualdate" select="current-dateTime()"/>
         <xsl:for-each select="ead/archdesc/dsc/c01/c02">
@@ -30,7 +34,7 @@
                                             </xsl:for-each>
                                         </controlaccess>
                                         <processinfo>
-                                            <p>this fonds was selected by EHRI from their holding
+                                            <p>This fonds was selected by EHRI from their holding
                                                 guide, based on date range and subject</p>
                                         </processinfo>
                                     </archdesc>
@@ -73,7 +77,11 @@
             </profiledesc>
             <revisiondesc>
                 <change>
-                    <date calendar="gregorian" era="ce">
+                    <date><xsl:value-of select="$datachangeprovenance_date" /></date>                   
+                    <item><xsl:value-of select="$datachangeprovenance_item" /></item>
+                </change>
+                <change>
+                    <date>
                         <xsl:value-of select="$actualdate"/>
                     </date>
                     <item>preprocessing transformation</item>
